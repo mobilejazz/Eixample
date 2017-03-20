@@ -1,6 +1,10 @@
+![Mobile Jazz Eixample](https://raw.githubusercontent.com/mobilejazz/metadata/master/images/banners/mobile-jazz-eixample.jpg)
+
 # Eixample
 
-A CSS flex grid made with love in Barcelona by Mobile Jazz.
+Pronounced ey-sham-pla, the Catalan word for extension. The Eixample is district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.
+
+This CSS flexbox grid is made with love in Barcelona by Mobile Jazz.
 
 ## Getting Started
 
@@ -18,7 +22,7 @@ This open source project is maintained by [Adam Smith](https://github.com/adchsm
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+    http://www.apache.org/licenses/LICENSE-2.0
 
     Unless required by applicable law or agreed to in writing, software
     distributed under the License is distributed on an "AS IS" BASIS,
