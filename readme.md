@@ -1,4 +1,4 @@
-![Mobile Jazz Eixample](https://raw.githubusercontent.com/mobilejazz/metadata/master/images/banners/mobile-jazz-eixample.jpg)
+![](https://raw.githubusercontent.com/mobilejazz/metadata/master/images/banners/mobile-jazz-eixample.png)
 
 # Eixample
 
