@@ -2,9 +2,9 @@
 
 # Eixample
 
-Pronounced ey-sham-pla, the Catalan word for extension. The Eixample is a district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.
+The Eixample (pronounced ey-sham-pla) is a district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.
 
-This CSS flexbox grid is made with love in Barcelona by Mobile Jazz.
+Inspired by our city, this CSS flexbox grid is made with love by [Mobile Jazz](https://www.mobilejazz.com/).
 
 ## Getting Started
 

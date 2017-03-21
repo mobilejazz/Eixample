@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Eixample Documentation</title>
+        <meta name="description" content="Documentation of Eixample, a flexbox CSS grid.">
+        <meta name="author" content="Mobile Jazz">
+        <link rel="stylesheet" href="dev/css/eixample.css">
+        <style>
+            body {
+                font-size: 16px;
+                line-height: 19px;
+                color: #333;
+                font-family: sans-serif;
+            }
+
+            pre,
+            code {
+                color: #666;
+                background-color: #fafafa;
+                border-radius: 2px;
+            }
+
+            pre {
+                padding: 15px;
+            }
+
+            code {
+                padding: 2px;
+            }
+
+            .container.demo {
+                min-height: 100px;
+                background-color: rgba( 0, 0, 0, 0.1 );
+                background-image: linear-gradient(to bottom, #fff2f2 0%, #fff2f2 100%), linear-gradient(to bottom, #ffe0e0 0%, #ffe0e0 100%);
+                background-clip: content-box, padding-box;
+            }
+
+            .container.demo .row {
+                background-color: #f2fcff;
+                border-left: 30px solid #d1f4ff;
+                border-right: 30px solid #d1f4ff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- Contents -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h1>Eixample Documentation</h1>
+
+                    <p>The Eixample (pronounced ey-sham-pla) is a district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.</p>
+
+                    <p>Inspired by our city, this CSS flexbox grid is made with love by <a href="https://www.mobilejazz.com/">Mobile Jazz</a>.</p>
+
+                    <h2>Contents:</h2>
+
+                    <ol>
+                        <li><a href="#technologies">Technologies</a></li>
+                        <li><a href="#breakpoints">Breakpoints</a></li>
+                        <li><a href="#containers">Containers</a></li>
+                        <li><a href="#rows">Rows</a></li>
+                        <li><a href="#columns">Columns</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technologies -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="technologies">Technologies</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breakpoints -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="breakpoints">Breakpoints</h2>
+
+                    <p>Eixample is a mobile-first responsive grid, which uses four media queries to create layouts for five screen widths. These media queries are based on minimum widths and scale up.</p>
+
+<pre>// Extra small devices (xs)
+// 0px +
+// No media query
+
+// Small devices (sm)
+// 600px +
+@media ( min-width: $breakpoint-sm ) {
+}
+
+// Medium devices (md)
+// 900px +
+@media ( min-width: $breakpoint-md ) {
+}
+
+// Large devices (lg)
+// 1200px +
+@media ( min-width: $breakpoint-lg ) {
+}
+
+// Extra large devices (xl)
+// 1500px +
+@media ( min-width: $breakpoint-xl ) {
+}</pre>
+
+                    <p>The width of these break points can be customized in <code>sass/_settings.scss</code></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Containers -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="containers">Containers</h2>
+
+                    <p>Containers are used to constrain the width and centralize your content. They are required and set nessecary spacing.</p>
+
+                    <h3>Basic Container</h3>
+
+                    <p>The default container will expand upto 1200px wide before centralizing on larger screens. You can customize this width by changing the value of the Sass variable <code>$container-max-width</code> in <code>sass/_settings.scss</code>.</p>
+
+                    <p>To create a container, use the class <code>.container</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <p>A container</p>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Container Modifiers</h3>
+
+                    <p>There are two additional modifier classes that can be used to change a container's style. You can use these independently, or combine them.</p>
+
+                    <p>Create a full-width container that expands to any screen size by adding the class <code>.fluid</code>.</p>
+
+                    <p>Remove a container's internal padding to create and edge-to-edge style by adding the class <code>.edge</code>.</p>
+
+<pre>&lt;div class="container fluid"&gt;
+&lt;/div&gt;
+
+&lt;div class="container edge"&gt;
+&lt;/div&gt;
+
+&lt;div class="container fluid edge"&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Examples:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container fluid demo">
+            <p>A full-width, fluid container</p>
+        </div>
+
+        <div class="container edge demo">
+            <p>An edge-to-edge container</p>
+        </div>
+
+        <div class="container fluid edge demo">
+            <p>A full-width, edge-to-edge container</p>
+        </div>
+
+        <!-- Rows -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="rows">Rows</h2>
+
+                    <p>Rows are required to group columns and should be direct children of containers.</p>
+
+                    <h3>Basic Row</h3>
+
+                    <p>Rows have a fluid width and will expand upto any size. They feature negative margins to ensure proper placement for both ltr and rtl languages.</p>
+
+                    <p>To create a row, use the class <code>.row</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row">
+                <p>A row inside a container</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Row Modifiers</h3>
+
+                    <p>There are many different modifier classes you can apply to rows to alter the behaviour and position of the columns they hold.</p>
+
+                    <h4>Wraps</h4>
+
+                    <h4>Direction</h4>
+
+                    <h4>Horizontal Alignment</h4>
+
+                    <h4>Vertical Alignment</h4>
+
+                    <h4>Wrap Alignment</h4>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
