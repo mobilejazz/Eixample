@@ -3,24 +3,24 @@
     padding-left: $gutter;
     padding-right: $gutter;
 
-    // Align
-    &.vertical-align-top {
+    // Vertically align
+    &.valign-top {
         align-self: flex-start;
     }
 
-    &.vertical-align-bottom {
+    &.valign-bottom {
         align-self: flex-end;
     }
 
-    &.vertical-align-center {
+    &.valign-center {
         align-self: center;
     }
 
-    &.vertical-align-baseline {
+    &.valign-baseline {
         align-self: baseline;
     }
 
-    &.vertical-align-stretch {
+    &.valign-stretch {
         align-self: stretch;
     }
 
