@@ -25,6 +25,7 @@
     }
 
     // Sizes
+    // Extra small
     &.xs-1 {
         flex-basis: ( 100% / 12 ) * 1;
     }
@@ -73,7 +74,8 @@
         flex-basis: 100%;
     }
 
-    @media ( min-width: 600px ) {
+    // Small
+    @media ( min-width: $breakpoint-sm ) {
         &.sm-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -123,7 +125,8 @@
         }
     }
 
-    @media ( min-width: 900px ) {
+    // Medium
+    @media ( min-width: $breakpoint-md ) {
         &.md-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -173,7 +176,8 @@
         }
     }
 
-    @media ( min-width: 1200px ) {
+    // Large
+    @media ( min-width: $breakpoint-lg ) {
         &.lg-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -223,7 +227,8 @@
         }
     }
 
-    @media ( min-width: 1500px ) {
+    // Extra large
+    @media ( min-width: $breakpoint-xl ) {
         &.xl-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
