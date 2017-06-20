@@ -1,16 +1,16 @@
-.container {
+.eix__container {
     margin-left: auto;
-	margin-right: auto;
+    margin-right: auto;
     padding-left: $gutter;
     padding-right: $gutter;
-	max-width: $container-max-width;
+    max-width: $container-max-width;
+}
 
-    &.fluid {
-        max-width: none;
-    }
+.eix__container--fluid {
+    max-width: none;
+}
 
-    &.edge {
-        padding-left: 0;
-        padding-right: 0;
-    }
+.eix__container--edge {
+    padding-left: 0;
+    padding-right: 0;
 }
