@@ -1,8 +1,8 @@
 .column {
-    position: relative;
-    padding-left: $gutter;
-    padding-right: $gutter;
     min-width: 0;
+    padding-left: $gutter / 2;
+    padding-right: $gutter / 2;
+    position: relative;
 
     // Vertically align
     &.valign-top {
@@ -27,6 +27,10 @@
 
     // Sizes
     // Extra small
+    &.xs-auto {
+        flex-basis: auto;
+    }
+
     &.xs-1 {
         flex-basis: ( 100% / 12 ) * 1;
     }
@@ -77,6 +81,10 @@
 
     // Small
     @media ( min-width: $breakpoint-sm ) {
+        &.sm-auto {
+            flex-basis: auto;
+        }
+
         &.sm-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -128,6 +136,10 @@
 
     // Medium
     @media ( min-width: $breakpoint-md ) {
+        &.md-auto {
+            flex-basis: auto;
+        }
+
         &.md-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -179,6 +191,10 @@
 
     // Large
     @media ( min-width: $breakpoint-lg ) {
+        &.lg-auto {
+            flex-basis: auto;
+        }
+
         &.lg-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -230,6 +246,10 @@
 
     // Extra large
     @media ( min-width: $breakpoint-xl ) {
+        &.xl-auto {
+            flex-basis: auto;
+        }
+
         &.xl-1 {
             flex-basis: ( 100% / 12 ) * 1;
         }
@@ -276,6 +296,16 @@
 
         &.xl-12 {
             flex-basis: 100%;
+        }
+    }
+}
+
+// Guttering
+.row {
+    &.gutter-remove {
+        .column {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }

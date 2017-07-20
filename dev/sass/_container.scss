@@ -1,9 +1,10 @@
 .container {
     margin-left: auto;
 	margin-right: auto;
+	max-width: $container-max-width;
+    overflow: auto;
     padding-left: $gutter;
     padding-right: $gutter;
-	max-width: $container-max-width;
 
     &.fluid {
         max-width: none;

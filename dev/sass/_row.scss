@@ -1,10 +1,17 @@
 .row {
     display: flex;
-    margin-left: -$gutter;
-    margin-right: -$gutter;
+
+    &:not( .gutter-remove ) {
+        margin-left: - $gutter / 2;
+        margin-right: - $gutter / 2;
+    }
 
     // Wrap
-    flex-wrap: wrap; // Default
+    flex-wrap: wrap;
+
+    &.wrap-wrap {
+        flex-wrap: wrap;
+    }
 
     &.wrap-nowrap {
         flex-wrap: nowrap;
@@ -76,27 +83,30 @@
     }
 
     // Vertically align wrapped columns
-    &.wrap-align-start {
+    align-items: flex-start; // Default
+
+    &.valign-wrapped-top {
         align-content: flex-start;
     }
 
-    &.wrap-align-end {
+    &.valign-wrapped-bottom {
         align-content: flex-end;
     }
 
-    &.wrap-align-center {
+    &.valign-wrapped-middle {
         align-content: center;
     }
 
-    &.wrap-align-stretch {
+    &.valign-wrapped-stretch {
         align-content: stretch;
+        align-items: stretch;
     }
 
-    &.wrap-align-justify {
+    &.valign-wrapped-justify {
         align-content: space-between;
     }
 
-    &.wrap-align-equally {
+    &.valign-wrapped-equally {
         align-content: space-around;
     }
 }

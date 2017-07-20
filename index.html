@@ -29,17 +29,16 @@
                 padding: 2px;
             }
 
-            .container.demo {
-                min-height: 100px;
-                background-color: rgba( 0, 0, 0, 0.1 );
-                background-image: linear-gradient(to bottom, #fff2f2 0%, #fff2f2 100%), linear-gradient(to bottom, #ffe0e0 0%, #ffe0e0 100%);
-                background-clip: content-box, padding-box;
+            .demo {
+                background-color: #fff2f2;
             }
 
-            .container.demo .row {
+            .demo .row {
                 background-color: #f2fcff;
-                border-left: 30px solid #d1f4ff;
-                border-right: 30px solid #d1f4ff;
+            }
+
+            .demo .column {
+                background-color: #bffce6;
             }
         </style>
     </head>
@@ -49,11 +48,13 @@
         <div class="container">
             <div class="row align-center">
                 <div class="column xs-12 sm-10 md-8">
-                    <h1>Eixample Documentation</h1>
+                    <p><img src="https://raw.githubusercontent.com/mobilejazz/metadata/master/images/banners/mobile-jazz-eixample.png" style="max-width: 100%;"></p>
+
+                    <h1>Eixample</h1>
 
                     <p>The Eixample (pronounced ey-sham-pla) is a district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.</p>
 
-                    <p>Inspired by our city, this CSS flexbox grid is made with love by <a href="https://www.mobilejazz.com/">Mobile Jazz</a>.</p>
+                    <p>Inspired by our city, this CSS flexbox grid is made with love by <a href="https://mobilejazz.com/">Mobile Jazz</a>.</p>
 
                     <h2>Contents:</h2>
 
@@ -61,8 +62,13 @@
                         <li><a href="#technologies">Technologies</a></li>
                         <li><a href="#breakpoints">Breakpoints</a></li>
                         <li><a href="#containers">Containers</a></li>
+                        <li><a href="#container-modifiers">Container Modifiers</a></li>
                         <li><a href="#rows">Rows</a></li>
                         <li><a href="#columns">Columns</a></li>
+                        <li><a href="#row-modifiers">Row Modifiers</a></li>
+                        <li><a href="#column-modifiers">Column Modifiers</a></li>
+                        <li><a href="#display-classes">Display Classes</a></li>
+                        <li><a href="#support">Support</a></li>
                     </ol>
                 </div>
             </div>
@@ -73,6 +79,8 @@
             <div class="row align-center">
                 <div class="column xs-12 sm-10 md-8">
                     <h2 id="technologies">Technologies</h2>
+
+                    <p>Eixample is built using <a href="http://compass-style.org/">Compass</a>, if you wish to modify the default grid, you'll need it installed locally to recompile the styles.</p>
                 </div>
             </div>
         </div>
@@ -83,7 +91,7 @@
                 <div class="column xs-12 sm-10 md-8">
                     <h2 id="breakpoints">Breakpoints</h2>
 
-                    <p>Eixample is a mobile-first responsive grid, which uses four media queries to create layouts for five screen widths. These media queries are based on minimum widths and scale up.</p>
+                    <p>Eixample is a mobile-first responsive grid, which uses four media queries to create layouts for five screen widths <code>xs</code> <code>sm</code> <code>md</code> <code>lg</code> and <code>xl</code>. These media queries are based on minimum widths and scale up.</p>
 
 <pre>// Extra small devices (xs)
 // 0px +
@@ -143,24 +151,18 @@
         <div class="container">
             <div class="row align-center">
                 <div class="column xs-12 sm-10 md-8">
-                    <h3>Container Modifiers</h3>
+                    <h2 id="container-modifiers">Container Modifiers</h2>
 
                     <p>There are two additional modifier classes that can be used to change a container's style. You can use these independently, or combine them.</p>
 
+                    <h4>Full Width Container</h4>
+
                     <p>Create a full-width container that expands to any screen size by adding the class <code>.fluid</code>.</p>
 
-                    <p>Remove a container's internal padding to create and edge-to-edge style by adding the class <code>.edge</code>.</p>
-
 <pre>&lt;div class="container fluid"&gt;
-&lt;/div&gt;
-
-&lt;div class="container edge"&gt;
-&lt;/div&gt;
-
-&lt;div class="container fluid edge"&gt;
 &lt;/div&gt;</pre>
 
-                    <h5>Examples:</h5>
+                    <h5>Example:</h5>
                 </div>
             </div>
         </div>
@@ -169,8 +171,38 @@
             <p>A full-width, fluid container</p>
         </div>
 
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Edge to Edge Container</h4>
+
+                    <p>Remove a container's internal padding to create and edge-to-edge style by adding the class <code>.edge</code>.</p>
+
+<pre>&lt;div class="container edge"&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
         <div class="container edge demo">
             <p>An edge-to-edge container</p>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Full Width, Edge to Edge Container</h4>
+
+                    <p>Combine both class <code>.fluid</code> and <code>.edge</code> classes to create a full-width, edge-to-edge container.</p>
+
+<pre>&lt;div class="container fluid edge"&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
         </div>
 
         <div class="container fluid edge demo">
@@ -185,7 +217,7 @@
 
                     <p>Rows are required to group columns and should be direct children of containers.</p>
 
-                    <h3>Basic Row</h3>
+                    <h4>Basic Row</h4>
 
                     <p>Rows have a fluid width and will expand upto any size. They feature negative margins to ensure proper placement for both ltr and rtl languages.</p>
 
@@ -207,22 +239,1433 @@
             </div>
         </div>
 
+        <!-- Columns -->
         <div class="container">
             <div class="row align-center">
                 <div class="column xs-12 sm-10 md-8">
-                    <h3>Row Modifiers</h3>
+                    <h2 id="columns">Columns</h2>
 
-                    <p>There are many different modifier classes you can apply to rows to alter the behaviour and position of the columns they hold.</p>
+                    <p>Columns are used to divide content and should be direct children of containers.</p>
 
-                    <h4>Wraps</h4>
+                    <h4>Basic Column</h4>
 
-                    <h4>Direction</h4>
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
 
-                    <h4>Horizontal Alignment</h4>
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
 
-                    <h4>Vertical Alignment</h4>
+        <div class="container demo">
+            <div class="row">
+                <div class="column">
+                    <p>A column</p>
+                </div>
+            </div>
+        </div>
 
-                    <h4>Wrap Alignment</h4>
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Column Widths</h4>
+
+                    <p>Eixample has a traditional 12 column layout, available for each of the five breakpoints. Use the base class <code>.column</code> with a combination of sizes classes: <code>.xs-*</code> <code>.sm-*</code> <code>.md-*</code> <code>.lg-*</code> <code>.xl-*</code> combined with a column span between <code>1</code> and <code>12</code>.</p>
+
+                    <p>Widths don't have to be set for each breakpoint. If no width is set for <code>.xl-*</code> the width for <code>.lg-*</code> will be used instead. This fallback goes through <code>.md-*</code> <code>.sm-*</code> and finally <code>.xs-*</code>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3 lg-4 xl-2"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 lg-2 xl-4"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-6 sm-9 md-3 lg-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-6 sm-3 md-3 lg-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row">
+                <div class="column xs-12 sm-6 md-3 lg-4 xl-2">
+                    <p>Column xs-12 sm-6 md-3 lg-4 xl-2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 lg-2 xl-4">
+                    <p>Column xs-12 sm-6 md-3 lg-2 xl-4</p>
+                </div>
+
+                <div class="column xs-6 sm-9 md-3 lg-6">
+                    <p>Column xs-6 sm-9 md-3 lg-6</p>
+                </div>
+
+                <div class="column xs-6 sm-3 md-3 lg-12">
+                    <p>Column xs-6 sm-3 md-3 lg-12</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Automatic Column Widths</h4>
+
+                    <p>Column widths are entirely optional. If you don't specify a width, the column will size itself according to it's content.</p>
+
+                    <p>However, you can also enforce an automatic width for specific breakpoints by setting the size class with <code>*-auto</code>.
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-auto"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-auto md-6"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row">
+                <div class="column xs-12 sm-6 md-auto">
+                    <p>Column xs-12 sm-6 md-auto</p>
+                </div>
+
+                <div class="column xs-12 sm-auto md-6">
+                    <p>Column xs-12 sm-auto md-6</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row Modifiers -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="row-modifiers">Row Modifiers</h2>
+
+                    <p>There are many modifier classes you can apply to rows to alter the behaviour and position of the columns they hold.</p>
+
+                    <h3>Wraps</h3>
+
+                    <p>The <code>.wrap-*</code> classes allow you to control if the columns should wrap to new lines.</p>
+
+                    <h4>Wrapping Columns</h4>
+
+                    <p>By default columns wrap from top to bottom. This can also be set by adding class <code>.wrap-wrap</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row wrap-wrap">
+                <div class="column xs-12 sm-6">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Reverse Wrap Columns</h4>
+
+                    <p>To reverse the direction of wrapping columns from bottom to top, add the class <code>.wrap-reverse</code> to the row.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row wrap-reverse"&gt;
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row wrap-reverse">
+                <div class="column xs-12 sm-6">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Stop Columns from Wrapping</h4>
+
+                    <p>To stop columns from wrapping, add the class <code>.wrap-nowrap</code> to the row.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row wrap-nowrap"&gt;
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row wrap-nowrap">
+                <div class="column xs-12 sm-6">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Direction</h3>
+
+                    <p>The <code>.direction-*</code> classes allow you to control the direction of the columns inside a row.</p>
+
+                    <h4>Normal Column Direction</h4>
+
+                    <p>The default direction will be from left-to-right or right-to-left depending on the language direction. This can also be set by adding the class <code>.direction-normal</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row direction-normal"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row direction-normal">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Reverse Column Direction</h4>
+
+                    <p>To reverse the direction of columns, add class <code>.direction-reverse</code> to the row.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row direction-reverse"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row direction-reverse">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Top to Bottom Column Direction</h4>
+
+                    <p>To force columns to wrap down, add class <code>.direction-down</code> to the row.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row direction-down"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row direction-down">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Bottom to Top Column Direction</h4>
+
+                    <p>To force columns to wrap up, add class <code>.direction-up</code> to the row.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row direction-up"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row direction-up">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Horizontal Alignment</h3>
+
+                    <p>Columns can be horizontally aligned in in various ways with the <code>.align-*</code> classes.</p>
+
+                    <h4>Start Align Columns</h4>
+
+                    <p>By default the columns start from the side of the row. This can also be set by adding the class <code>.align-start</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row direction-normal">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>End Align Columns</h4>
+
+                    <p>Columns can be aligned to the end of the row by adding the class <code>.align-end</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row align-end"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row align-end">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Centrally Align Columns</h4>
+
+                    <p>Columns can be centrally by adding the class <code>.align-center</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row align-center"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row align-center">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Justify Columns</h4>
+
+                    <p>Columns can be justfied to either end of each row by adding the class <code>.align-justify</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row align-justify"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row align-justify">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Equally Space Columns</h4>
+
+                    <p>Columns can be equally spaced within the row by adding the class <code>.align-equally</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row align-equally"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row align-equally">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Vertical Alignment</h3>
+
+                    <p>Columns can be verically aligned within a row using the <code>.valign-*</code> classes.</p>
+
+                    <h4>Top Align Columns</h4>
+
+                    <p>By default the columns start from the top of the row. This can also be set by adding the class <code>.valign-top</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-top"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-top" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Bottom Align Columns</h4>
+
+                    <p>Columns can be aligned to the bottom of the row by adding the class <code>.valign-bottom</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-bottom"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-bottom" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Centrally Align Columns Vertically</h4>
+
+                    <p>Columns can be centrally aligned within the row by adding the class <code>.valign-middle</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-middle"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-middle" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Baseline Align Columns</h4>
+
+                    <p>Columns can be aligned to a united baseline by adding the class <code>.valign-baseline</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-baseline"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-baseline" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p style="font-size: 32px;">Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Stretch Columns</h4>
+
+                    <p>Columns can be stretched to fill the full height of the row by adding the class <code>.valign-stretch</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-stretch"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-stretch" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Wrap Alignment</h3>
+
+                    <p>Wrapped columns can be vertically aligned using the <code>.valign-wrapped-*</code> classes.</p>
+
+                    <h4>Top Align Wrapped Columns</h4>
+
+                    <p>By default, wrapped columns will be aligned to the top of the row. This can also be set by adding the class <code>.valign-wrapped-top</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-wrapped-top"&gt;
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-wrapped-top" style="min-height: 200px;">
+                <div class="column xs-12">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Bottom Align Wrapped Columns</h4>
+
+                    <p>Wrapped columns can be aligned to the bottom of a row by adding the class <code>.valign-wrapped-bottom</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-wrapped-bottom"&gt;
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-wrapped-bottom" style="min-height: 200px;">
+                <div class="column xs-12">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Centrally Align Wrapped Columns Vertically</h4>
+
+                    <p>Wrapped columns can be vertically aligned to the center of a row by adding the class <code>.valign-wrapped-middle</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-wrapped-middle"&gt;
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-wrapped-middle" style="min-height: 200px;">
+                <div class="column xs-12">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Stretch Wrapped Columns</h4>
+
+                    <p>Wrapped columns can be strecthed to fill the full height of a row by adding the class <code>.valign-wrapped-stretch</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-wrapped-stretch"&gt;
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-wrapped-stretch" style="min-height: 200px;">
+                <div class="column xs-12">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Justify Wrapped Columns</h4>
+
+                    <p>Wrapped columns can be justified to the top and bottom of a row by adding the class <code>.valign-wrapped-justify</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-wrapped-justify"&gt;
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-wrapped-justify" style="min-height: 200px;">
+                <div class="column xs-12">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Equally Space Wrapped Columns</h4>
+
+                    <p>Wrapped columns can be equally spaced within the row by adding the class <code>.valign-wrapped-equally</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row valign-wrapped-equally"&gt;
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row valign-wrapped-equally" style="min-height: 200px;">
+                <div class="column xs-12">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h3>Guttering</h3>
+
+                    <p>The guttering to space columns can be removed by adding class <code>.gutter-remove</code> to a row.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row gutter-remove"&gt;
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row gutter-remove">
+                <div class="column xs-12 sm-6">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6">
+                    <p>Column 2</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column Modifiers -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="column-modifiers">Column Modifiers</h2>
+
+                    <p>Groups of columns can be aligned using <a href="#row-modifiers">row modifiers</a> and individual columns can be aligned using the following classes.</p>
+
+                    <h3>Vertical Alignment</h3>
+
+                    <p>Like rows <code>.valign-*</code> classes can be applied to columns to individually align a single column.</p>
+
+                    <h4>Top Align a Column</h4>
+
+                    <p>By default columns start from the top of a row. This can also be set by adding class <code>.valign-top</code> to the column.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 valign-top"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 valign-top">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Bottom Align a Column</h4>
+
+                    <p>To align a single column to the bottom of a row, add class <code>.valign-bottom</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 valign-bottom"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 valign-bottom">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Centrally Align a Column Vertically</h4>
+
+                    <p>To verically align a single column to the middle of a row, add class <code>.valign-middle</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 valign-middle"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 valign-middle">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Baselin Align a Column</h4>
+
+                    <p>To align individual columns to the baseline, add class <code>.valign-baseline</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3 valign-baseline"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 valign-baseline"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 valign-baseline"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3 valign-baseline">
+                    <p style="font-size: 32px;">Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 valign-baseline">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 valign-baseline">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Stretch a Column</h4>
+
+                    <p>To stretch a single column to full height row, add class <code>.valign-stretch</code>.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3 valign-stretch"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xs-12 sm-6 md-3"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row" style="min-height: 200px;">
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 1</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3 valign-stretch">
+                    <p>Column 2</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 3</p>
+                </div>
+
+                <div class="column xs-12 sm-6 md-3">
+                    <p>Column 4</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Display Classes -->
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="display-classes">Display Classes</h2>
+
+                    <p>Display Classes are column modifiers to show/hide columns on specific screen sizes.</p>
+
+                    <h4>Hide a Column</h4>
+
+                    <p>Combine the <code>.*-hide</code> class with <code>.xs-*</code> <code>.sm-*</code> <code>.md-*</code> <code>.lg-*</code> <code>.xl-*</code> to hide an inidivual column at that screen size.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-hide"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column sm-hide"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column md-hide"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column lg-hide"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xl-hide"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row">
+                <div class="column xs-hide">
+                    <p>Hide on extra small screens</p>
+                </div>
+
+                <div class="column sm-hide">
+                    <p>Hide on small screens</p>
+                </div>
+
+                <div class="column md-hide">
+                    <p>Hide on medium screens</p>
+                </div>
+
+                <div class="column lg-hide">
+                    <p>Hide on large screens</p>
+                </div>
+
+                <div class="column xl-hide">
+                    <p>Hide on extra large screens</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h4>Show a Column</h4>
+
+                    <p>Combine the <code>.*-show</code> class with <code>.xs-*</code> <code>.sm-*</code> <code>.md-*</code> <code>.lg-*</code> <code>.xl-*</code> to display a column only on that screen size. It will be hidden on all other screen sizes.</p>
+
+<pre>&lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+        &lt;div class="column xs-show"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column sm-show"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column md-show"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column lg-show"&gt;
+        &lt;/div&gt;
+
+        &lt;div class="column xl-show"&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <h5>Example:</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container demo">
+            <div class="row">
+                <div class="column xs-show">
+                    <p>Show on extra small screens</p>
+                </div>
+
+                <div class="column sm-show">
+                    <p>Show on small screens</p>
+                </div>
+
+                <div class="column md-show">
+                    <p>Show on medium screens</p>
+                </div>
+
+                <div class="column lg-show">
+                    <p>Show on large screens</p>
+                </div>
+
+                <div class="column xl-show">
+                    <p>Show on extra large screens</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-center">
+                <div class="column xs-12 sm-10 md-8">
+                    <h2 id="support">Support</h2>
+
+                    <p>If you're having any issues with Exiample, we're here to help. Please make sure you've read through this documentation and check your browser supports flexbox at <a href="http://caniuse.com/flexbox">Can I Use</a>.</p>
+
+                    <p>If you need support or have found a bug, please raise an issue on <a href="https://github.com/mobilejazz/Eixample/">GitHub</a>, and we'll get right back to you.</p>
                 </div>
             </div>
         </div>
