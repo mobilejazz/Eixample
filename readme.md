@@ -8,7 +8,7 @@ Inspired by our city, this CSS flexbox grid is made with love by [Mobile Jazz](h
 
 ## Getting Started
 
-Coming soon.
+For complete documentation and demos, check the index.html file in the root of the repository.
 
 ## Project Maintainer
 
