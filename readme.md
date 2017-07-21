@@ -2,13 +2,11 @@
 
 # Eixample
 
-The Eixample (pronounced ey-sham-pla) is a district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.
-
-Inspired by our city, this CSS flexbox grid is made with love by [Mobile Jazz](https://www.mobilejazz.com/).
+The Eixample *(pronounced ey-sham-pla)* is a district in Barcelona, characterized by it's strict grid system of long straight streets and wide avenues. Inspired by our city, this CSS flexbox grid is made with love by [Mobile Jazz](https://www.mobilejazz.com/).
 
 ## Getting Started
 
-For complete documentation and demos, check the index.html file in the root of the repository.
+For complete documentation and demos, please see `docs/eixample-docs.html`.
 
 ## Project Maintainer
 

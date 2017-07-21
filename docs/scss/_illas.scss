@@ -1,0 +1,59 @@
+.eixample {
+    margin: 50px 0;
+}
+
+.eixample .row {
+    margin: 0 -1%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.illa {
+    height: 0;
+    padding-bottom: 14.666666667%;
+    background-color: #f42156;
+    position: relative;
+    margin: 1%;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.illa:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 10px solid #f42156;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    width: calc( 100% - 20px );
+    height: 0;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.illa:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 10px solid #f42156;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    width: calc( 100% - 20px );
+    height: 0;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+
+.illa:hover {
+    background-color: #e02581;
+}
+
+.illa:hover:after {
+    border-top-color: #e02581;
+}
+
+.illa:hover:before {
+    border-bottom-color: #e02581;
+}

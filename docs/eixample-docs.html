@@ -5,42 +5,8 @@
         <title>Eixample Documentation</title>
         <meta name="description" content="Documentation of Eixample, a flexbox CSS grid.">
         <meta name="author" content="Mobile Jazz">
-        <link rel="stylesheet" href="dev/css/eixample.css">
-        <style>
-            body {
-                font-size: 16px;
-                line-height: 19px;
-                color: #333;
-                font-family: sans-serif;
-            }
-
-            pre,
-            code {
-                color: #666;
-                background-color: #fafafa;
-                border-radius: 2px;
-            }
-
-            pre {
-                padding: 15px;
-            }
-
-            code {
-                padding: 2px;
-            }
-
-            .demo {
-                background-color: #fff2f2;
-            }
-
-            .demo .row {
-                background-color: #f2fcff;
-            }
-
-            .demo .column {
-                background-color: #bffce6;
-            }
-        </style>
+        <link rel="stylesheet" href="../dev/css/eixample.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
@@ -48,15 +14,41 @@
         <div class="container">
             <div class="row align-center">
                 <div class="column xs-12 sm-10 md-8">
-                    <p><img src="https://raw.githubusercontent.com/mobilejazz/metadata/master/images/banners/mobile-jazz-eixample.png" style="max-width: 100%;"></p>
+
+                    <div class="eixample">
+                        <div class="row wrap-nowrap gutter-remove">
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                        </div>
+
+                        <div class="row wrap-nowrap gutter-remove">
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                        </div>
+
+                        <div class="row wrap-nowrap gutter-remove">
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                        </div>
+                    </div>
 
                     <h1>Eixample</h1>
 
-                    <p>The Eixample (pronounced ey-sham-pla) is a district in Barcelona characterized by it's strict grid system of long straight streets and wide avenues.</p>
+                    <p class="lead">The Eixample <em>(pronounced ey-sham-pla)</em> is a district in Barcelona, characterized by it's strict grid system of long straight streets and wide avenues. Inspired by our city, this CSS flexbox grid is made with love by <a href="https://mobilejazz.com/">Mobile Jazz</a>.</p>
 
-                    <p>Inspired by our city, this CSS flexbox grid is made with love by <a href="https://mobilejazz.com/">Mobile Jazz</a>.</p>
-
-                    <h2>Contents:</h2>
+                    <h2>Contents</h2>
 
                     <ol>
                         <li><a href="#technologies">Technologies</a></li>
@@ -274,7 +266,7 @@
                 <div class="column xs-12 sm-10 md-8">
                     <h4>Column Widths</h4>
 
-                    <p>Eixample has a traditional 12 column layout, available for each of the five breakpoints. Use the base class <code>.column</code> with a combination of sizes classes: <code>.xs-*</code> <code>.sm-*</code> <code>.md-*</code> <code>.lg-*</code> <code>.xl-*</code> combined with a column span between <code>1</code> and <code>12</code>.</p>
+                    <p>Eixample has a traditional 12 column layout, available for each of the five breakpoints. Use the base class <code>.column</code> with a combination of sizes classes: <code>.xs-*</code> <code>.sm-*</code> <code>.md-*</code> <code>.lg-*</code> <code>.xl-*</code> combined with a column span between <code>*-1</code> and <code>*-12</code>.</p>
 
                     <p>Widths don't have to be set for each breakpoint. If no width is set for <code>.xl-*</code> the width for <code>.lg-*</code> will be used instead. This fallback goes through <code>.md-*</code> <code>.sm-*</code> and finally <code>.xs-*</code>
 
@@ -1666,8 +1658,39 @@
                     <p>If you're having any issues with Exiample, we're here to help. Please make sure you've read through this documentation and check your browser supports flexbox at <a href="http://caniuse.com/flexbox">Can I Use</a>.</p>
 
                     <p>If you need support or have found a bug, please raise an issue on <a href="https://github.com/mobilejazz/Eixample/">GitHub</a>, and we'll get right back to you.</p>
+
+                    <div class="eixample">
+                        <div class="row wrap-nowrap gutter-remove">
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                        </div>
+
+                        <div class="row wrap-nowrap gutter-remove">
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                        </div>
+
+                        <div class="row wrap-nowrap gutter-remove">
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                            <div class="column xs-2 illa"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
     </body>
 </html>

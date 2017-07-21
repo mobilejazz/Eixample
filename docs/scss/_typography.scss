@@ -1,0 +1,79 @@
+body {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.4;
+    color: $text-dark;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+
+}
+
+a {
+    color: $pink;
+    text-decoration: none;
+
+    &:hover {
+        color: $purple;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.lead {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+pre,
+code {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+}
+
+pre {
+    padding: 15px;
+    color: $text-light;
+    background-color: $background-dark;
+    position: relative;
+    white-space: pre;
+    overflow: auto;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-bottom: 10px solid $background-dark;
+        border-left: 10px solid white;
+        border-right: 10px solid white;
+        width: calc( 100% - 20px );
+        height: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-top: 10px solid $background-dark;
+        border-left: 10px solid white;
+        border-right: 10px solid white;
+        width: calc( 100% - 20px );
+        height: 0;
+    }
+}
+
+code {
+    color: #e02581;
+    background-color: $background-light;
+    padding: 3px 6px;
+}
