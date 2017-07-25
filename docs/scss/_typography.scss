@@ -18,7 +18,7 @@ a {
     transition: all 200ms ease;
 
     &:hover {
-        color: darken( $pink, 20% );
+        color: $purple;
     }
 }
 
@@ -76,7 +76,7 @@ pre {
 }
 
 code {
-    color: #e02581;
+    color: $blue;
     background-color: $background-light;
     padding: 3px 6px;
 }
