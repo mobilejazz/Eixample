@@ -1,10 +1,13 @@
 .demo {
     background-color: rgba( $blue, 0.1 );
-    border-left: 15px solid rgba( $blue, 0.1 );
-    border-right: 15px solid rgba( $blue, 0.1 );
-    padding-left: 0;
-    padding-right: 0;
     margin-bottom: 40px;
+
+    &:not( .edge ) {
+        border-left: 15px solid rgba( $blue, 0.1 );
+        border-right: 15px solid rgba( $blue, 0.1 );
+        padding-left: 0;
+        padding-right: 0;
+    }
 
     .row {
         background-color: rgba( $purple, 0.1 );
