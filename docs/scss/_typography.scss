@@ -14,8 +14,11 @@ a {
     color: $pink;
     text-decoration: none;
 
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+
     &:hover {
-        color: $purple;
+        color: darken( $pink, 20% );
     }
 }
 

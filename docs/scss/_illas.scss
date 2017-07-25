@@ -11,7 +11,7 @@
 .illa {
     height: 0;
     padding-bottom: 14.666666667%;
-    background-color: #f42156;
+    background-color: $blue;
     position: relative;
     margin: 1%;
     -webkit-transition: all 200ms ease;
@@ -23,7 +23,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    border-bottom: 10px solid #f42156;
+    border-bottom: 10px solid $blue;
     border-left: 10px solid white;
     border-right: 10px solid white;
     width: calc( 100% - 20px );
@@ -37,7 +37,7 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    border-top: 10px solid #f42156;
+    border-top: 10px solid $blue;
     border-left: 10px solid white;
     border-right: 10px solid white;
     width: calc( 100% - 20px );
@@ -47,13 +47,13 @@
 }
 
 .illa:hover {
-    background-color: #e02581;
+    background-color: $purple;
 }
 
 .illa:hover:after {
-    border-top-color: #e02581;
+    border-top-color: $purple;
 }
 
 .illa:hover:before {
-    border-bottom-color: #e02581;
+    border-bottom-color: $purple;
 }

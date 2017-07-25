@@ -1,11 +1,11 @@
 .demo {
-    background-color: #d5bcdc;
+    background-color: rgba( $blue, 0.1 );
 }
 
 .demo .row {
-    background-color: #f2bcd7;
+    background-color: rgba( $purple, 0.1 );
 }
 
 .demo .column {
-    background-color: #fac3ba;
+    background-color: rgba( $pink, 0.1 );
 }
