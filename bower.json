@@ -1,0 +1,17 @@
+{
+  "name": "eixample",
+  "description": "A CSS flex grid made with love in Barcelona, from Mobile Jazz.",
+  "main": [
+    "dist/css/eixample.css"
+  ],
+  "keywords": [
+    "css",
+    "grid",
+    "flexbox",
+    "layout"
+  ],
+  "authors": [
+    "Adam Smith <adam@mobilejazz.com>"
+  ],
+    "license": "Apache-2.0"
+}

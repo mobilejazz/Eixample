@@ -1,0 +1,61 @@
+// Hide columns
+.xs-hide {
+    @media ( max-width: $breakpoint-sm - 1 ) {
+        display: none;
+    }
+}
+
+.sm-hide {
+    @media ( min-width: $breakpoint-sm ) and ( max-width: $breakpoint-md - 1 ) {
+        display: none;
+    }
+}
+
+.md-hide {
+    @media ( min-width: $breakpoint-md ) and ( max-width: $breakpoint-lg - 1 ) {
+        display: none;
+    }
+}
+
+.lg-hide {
+    @media ( min-width: $breakpoint-lg ) and ( max-width: $breakpoint-xl - 1 ) {
+        display: none;
+    }
+}
+
+.xl-hide {
+    @media ( min-width: $breakpoint-xl ) {
+        display: none;
+    }
+}
+
+// Show columns
+.xs-show {
+    @media ( min-width: $breakpoint-sm ) {
+        display: none;
+    }
+}
+
+.sm-show {
+    @media ( max-width: $breakpoint-sm - 1 ), ( min-width: $breakpoint-md ) {
+        display: none;
+    }
+}
+
+.md-show {
+    @media ( max-width: $breakpoint-md - 1 ), ( min-width: $breakpoint-lg ) {
+        display: none;
+    }
+}
+
+.lg-show {
+    @media ( max-width: $breakpoint-lg - 1 ), ( min-width: $breakpoint-xl ) {
+        display: none;
+    }
+}
+
+.xl-show {
+    @media ( max-width: $breakpoint-xl - 1 ) {
+        display: none;
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "eixample",
+  "version": "1.0.0",
+  "description": "A CSS flex grid made with love in Barcelona, from Mobile Jazz.",
+  "main": "dist/css/eixample.css",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "n/a"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mobilejazz/Eixample.git"
+  },
+  "keywords": [
+    "css",
+    "grid",
+    "layout",
+    "flexbox"
+  ],
+  "author": "Adam Smith <adam@mobilejazz.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/mobilejazz/Eixample/issues"
+  },
+  "homepage": "https://github.com/mobilejazz/Eixample#readme"
+}
