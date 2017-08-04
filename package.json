@@ -1,6 +1,6 @@
 {
   "name": "eixample",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CSS flex grid made with love in Barcelona, from Mobile Jazz.",
   "main": "dist/css/eixample.css",
   "directories": {

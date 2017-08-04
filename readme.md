@@ -6,7 +6,7 @@ The Eixample *(pronounced ey-sham-pla)* is a district in Barcelona, characterize
 
 ## Getting Started
 
-For complete documentation and demos, please see `docs/eixample-docs.html`.
+For complete documentation and demos, please visit our [GitHub Pages](https://mobilejazz.github.io/Eixample/).
 
 ## Project Maintainer
 
